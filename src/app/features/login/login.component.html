@@ -1,1 +1,24 @@
-<p>login works!</p>
+<section class="spread">
+  <div class="container">
+    <form [formGroup]="loginFormGroup" (ngSubmit)="login()">
+      <div class="text-center title">
+        GreenKoncepts
+      </div>
+      <div>
+        <mat-form-field appearance="standard">
+          <mat-label>Username</mat-label>
+          <input matInput formControlName="username">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="standard">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password">
+        </mat-form-field>
+      </div>
+      <div class="text-center">
+        <button [disabled]="loginFormGroup.invalid" type="submit" class="submit-button">login</button>
+      </div>
+    </form>
+  </div>
+</section>

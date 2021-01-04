@@ -1,0 +1,33 @@
+<app-header></app-header>
+
+<section class="spread min">
+  <div class="container">
+    <form [formGroup]="customerFormGroup" (ngSubmit)="addCustomer()">
+      <div class="text-center title">
+        Add Customer
+      </div>
+      <div>
+        <mat-form-field appearance="standard">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="customerName">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="standard">
+          <mat-label>Age</mat-label>
+          <input matInput maxlength="3" appNumbersOnly formControlName="customerAge">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="standard">
+          <mat-label>Address</mat-label>
+          <textarea matInput formControlName="customerAddress"></textarea>
+        </mat-form-field>
+      </div>
+      <div class="text-center">
+        <button [disabled]="customerFormGroup.invalid" type="submit" class="submit-button">save</button>
+        <button routerLink="/dashboard" class="submit-button cancel" style="margin-left: 10px;">cancel</button>
+      </div>
+    </form>
+  </div>
+</section>

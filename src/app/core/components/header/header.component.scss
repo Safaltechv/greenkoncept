@@ -1,0 +1,51 @@
+@import '../../../../assets/scss/base';
+
+header {
+  background: lighten($primary, 10%);
+  padding: 30px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  * {
+    color: $f;
+  }
+}
+span, a {
+  font-size: 1rem;
+}
+span {
+  text-transform: capitalize;
+}
+p {
+  font-size: 1.25rem;
+  margin: 0;
+}
+a {
+  cursor: pointer;
+}
+.logout {
+  display: inline-block;
+  margin-left: 30px;
+  cursor: pointer;
+}
+.back-button {
+  background: $t;
+  color: $f;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 640px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+
+    p, div {
+      flex-basis: 100%;
+    }
+    div {
+      margin-top: 20px;
+    }
+  }
+}

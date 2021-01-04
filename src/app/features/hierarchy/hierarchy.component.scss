@@ -1,0 +1,19 @@
+section {
+  padding: 60px;
+}
+.node-name {
+  padding-left: 15px;
+}
+ul {
+  padding: 0;
+
+  ul {
+    padding-left: 30px;
+  }
+  li {
+    list-style: none;
+  }
+}
+.mat-tree {
+  padding: 30px;
+}

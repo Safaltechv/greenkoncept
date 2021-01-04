@@ -1,0 +1,8 @@
+<header>
+  <button *ngIf="router.url !== '/dashboard'" routerLink="/dashboard" class="back-button">< Back</button>
+  <p>Welcome to Green Koncepts</p>
+  <div>
+    <span>{{ user.userName }}</span>
+    <a (click)="logout()" class="logout">Logout</a>
+  </div>
+</header>

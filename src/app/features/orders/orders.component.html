@@ -1,0 +1,22 @@
+<app-header></app-header>
+
+<section>
+  <table>
+    <thead>
+      <tr>
+        <th>Customer</th>
+        <th>Order Date</th>
+        <th>Order Detail</th>
+        <th>Order Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let instance of orders | async">
+        <td>{{ instance.customer.customerName }}</td>
+        <td>{{ instance.orderDate }}</td>
+        <td>{{ instance.orderDetail }}</td>
+        <td>{{ instance.orderAmount }}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
